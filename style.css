@@ -1,0 +1,100 @@
+:root{
+    --primary-color: #8B5CF6;
+    --base-font-size: 16px;
+    --2xl-font-size: 24px;
+    --4xl-font-size: 32px;
+    --light-font-weight: 300;
+    --regular-font-weight: 400;
+    --bold-font-weight: 700;
+    --black-font-weight: 900;
+  }
+body, ul, ol, p{
+    margin: 0;
+}
+body{
+    font-family: Arial;
+    background-color: rgb(213, 213, 213);
+}
+.header{
+    background-color: white;
+    height: 144px;
+    display: grid;
+    padding: 24px 192px;
+    grid-template-rows: 76px 44px;
+    gap: 24px;
+}
+.container{
+    display: flex;
+}
+.header .company-name{
+    margin-right: auto;
+    align-self: center;
+    font-size: var(--2xl-font-size);
+    font-weight: var(--black-font-weight);
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.info{
+    font-size: var(--base-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: right;
+    padding-right: 12px;
+    border-right: 1px solid #A78BFA;
+}
+.nav{
+    margin-right: auto;
+}
+.call-info{
+    padding-left: 12px;
+}
+
+.header .phone{
+    font-size: var(--4xl-font-size);
+    font-weight: var(--black-font-weight);
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.header .free-call{
+    font-size: var(--2xl-font-size);
+    font-weight: var(--light-font-weight);
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.nav{
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    
+    font-size: var(--base-font-size);
+    font-weight: var(--bold-font-weight);
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.nav a{
+    color: black;
+    margin-right: 24px;
+    text-decoration: none; 
+}
+.nav a:hover{
+    color: var(--primary-color);
+}
+.nav .selected{
+    color: var(--primary-color);
+    margin-right: 24px;
+    border-bottom: 2px dashed var(--primary-color);
+}
+.button{
+    border-radius: 4px;
+    padding: 10px 28px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #F9FAFB;
+    font-size: var(--base-font-size);
+    font-weight: var(--bold-font-weight);
+}
