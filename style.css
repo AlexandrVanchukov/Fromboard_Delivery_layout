@@ -1,25 +1,29 @@
 :root{
     --primary-color: #8B5CF6;
+    --base-black-color: #111827;
     --base-font-size: 16px;
+    --xl-font-size: 20px;
     --2xl-font-size: 24px;
+    --3xl-font-size: 30px;
     --4xl-font-size: 32px;
     --light-font-weight: 300;
     --regular-font-weight: 400;
     --bold-font-weight: 700;
     --black-font-weight: 900;
   }
-body, ul, ol, p{
+body, ul, ol, p, h1, h2{
     margin: 0;
 }
 body{
     font-family: Arial;
-    background-color: rgb(213, 213, 213);
+    color: var(--base-black-color);
+    background-color: #E5E7EB;
 }
 .header{
     background-color: white;
     height: 144px;
     display: grid;
-    padding: 24px 192px;
+    padding: 24px 15%;
     grid-template-rows: 76px 44px;
     gap: 24px;
 }
@@ -35,7 +39,7 @@ body{
     letter-spacing: 0em;
     text-align: left;
 }
-.info{
+.header .info{
     font-size: var(--base-font-size);
     font-weight: var(--regular-font-weight);
     line-height: 24px;
@@ -77,7 +81,7 @@ body{
     text-align: left;
 }
 .nav a{
-    color: black;
+    color: var(--base-black-color);
     margin-right: 24px;
     text-decoration: none; 
 }
@@ -97,4 +101,84 @@ body{
     color: #F9FAFB;
     font-size: var(--base-font-size);
     font-weight: var(--bold-font-weight);
+}
+
+
+.main{
+    padding: 72px 15%;
+}
+.main-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px , 1fr));
+    gap: 24px;
+}
+
+.calculator{
+    background-color: white;
+    padding: 24px 15%;
+    border-radius: 16px;
+    
+}
+.description{
+    align-self: center;
+} 
+.description .title{
+    font-size: var(--4xl-font-size);
+    font-weight: var(--black-font-weight);
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+.description .text{
+    font-size: var(--xl-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: 28px;
+}
+.description .image{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-top: 16px;
+}
+.calculator .info{
+    text-align: center;
+}
+.calculator h2{
+    font-size: var(--3xl-font-size);
+    font-weight: var(--bold-font-weight);
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+.calculator p{
+    font-size: var(--base-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: 24px;
+    margin-bottom: 28px;
+}
+.form-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, auto));
+    gap: 24px;
+    width: auto;
+}
+.form-grid .input{
+    font-size: var(--base-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: 24px;
+    color: var(--base-black-color);
+    padding: 12px;
+    border: 2px solid var(--base-black-color);
+    border-radius: 4px;
+    
+}
+.form-grid .input::placeholder{
+    font-size: var(--base-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: 24px;
+    color: #9CA3AF;
+}
+.form-grid .wide{
+    grid-column: 2 span;
+}
+.form-grid .button{
+    height: 44px;
 }
