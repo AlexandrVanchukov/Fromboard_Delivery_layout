@@ -1,6 +1,7 @@
 :root{
     --primary-color: #8B5CF6;
     --base-black-color: #111827;
+    --sm-font-size: 14px;
     --base-font-size: 16px;
     --xl-font-size: 20px;
     --2xl-font-size: 24px;
@@ -11,7 +12,7 @@
     --bold-font-weight: 700;
     --black-font-weight: 900;
   }
-body, ul, ol, p, h1, h2{
+body, ul, ol, p, h1, h2, h3{
     margin: 0;
 }
 body{
@@ -120,20 +121,22 @@ body{
     
 }
 .description{
-    align-self: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 } 
-.description .title{
+.main-info .description .title{
     font-size: var(--4xl-font-size);
     font-weight: var(--black-font-weight);
     line-height: 40px;
     margin-bottom: 12px;
 }
-.description .text{
+.main-info .description .text{
     font-size: var(--xl-font-size);
     font-weight: var(--regular-font-weight);
     line-height: 28px;
 }
-.description .image{
+.main-info .description .image{
     width: 100%;
     height: auto;
     border-radius: 16px;
@@ -181,4 +184,62 @@ body{
 }
 .form-grid .button{
     height: 44px;
+}
+
+.adventages .title{
+    line-height: 36px;
+    font-size: var(--3xl-font-size);
+    font-weight: var(--black-font-weight);
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.adventages-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32%, auto));
+    gap: 24px;
+    flex-wrap: wrap;
+}
+@media (max-width: 1200px) {
+    .adventages-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, auto));
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+}
+.adventages-list .item{ 
+    display: grid;
+    grid-template-columns: 136px minmax(200px, auto);
+    column-gap: 12px;
+    padding: 24px;
+}
+.adventages-list .description{
+    min-width: 200px;
+    justify-content: center;
+}
+
+.adventages-list .description .title{
+    
+    font-size: var(--2xl-font-size);
+    font-weight: var(--black-font-weight);
+    line-height: 32px;
+    margin-bottom: 12px;
+}
+.adventages-list .description .text{
+  
+    font-size: var(--sm-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: 20px;
+}
+.item .icon-container{
+    width: 136px;
+    line-height: 136px;
+
+    align-self: center;
+   text-align: center;
+}
+.icon-container img{
+    vertical-align: middle;
 }
