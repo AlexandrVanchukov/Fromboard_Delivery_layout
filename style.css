@@ -40,6 +40,9 @@ body{
     color: var(--base-black-color);
     background-color: #E5E7EB;
 }
+textarea{
+    resize: none;
+}
 .header{
     background-color: var(--base-white-color);
     height: 144px;
@@ -197,6 +200,7 @@ body{
     width: auto;
 }
 .form-grid .input{
+    font-family: Arial;
     font-size: var(--base-font-size);
     font-weight: var(--regular-font-weight);
     line-height: var(--base-line-height);
@@ -392,5 +396,18 @@ body{
 .reviews .carousels .arrow-right{
     transform: rotate(180deg);
     justify-self: end;
+}
+
+.question{
+    margin-top: 72px;
+    background-color: var(--base-white-color);
+    padding: 64px 20%;
+    border-radius: 16px;
+}
+.question .title{
+    text-align: center;
+}
+.question .form-grid{
+    margin-top: 32px;
 }
 
