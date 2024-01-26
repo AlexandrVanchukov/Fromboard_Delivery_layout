@@ -186,7 +186,7 @@ body{
     height: 44px;
 }
 
-.adventages .title{
+.adventages > .title{
     line-height: 36px;
     font-size: var(--3xl-font-size);
     font-weight: var(--black-font-weight);
