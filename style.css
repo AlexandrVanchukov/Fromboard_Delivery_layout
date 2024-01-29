@@ -54,7 +54,7 @@ textarea{
 .container{
     display: flex;
 }
-.header .company-name{
+.company-name{
     margin-right: auto;
     align-self: center;
     font-size: var(--2xl-font-size);
@@ -79,7 +79,7 @@ textarea{
     padding-left: 12px;
 }
 
-.header .phone{
+.phone{
     font-size: var(--4xl-font-size);
     font-weight: var(--black-font-weight);
     line-height: var(--4xl-line-height);
@@ -345,6 +345,7 @@ textarea{
     display: grid;
     grid-template-columns: 10% 1fr 1fr 10%;
 }
+
 .reviews .carousels .item{
     z-index: -1;
     position: relative;
@@ -352,7 +353,7 @@ textarea{
     padding: 16px 32px;
     border-radius: 16px;
 }
-.reviews .carousels div:nth-of-type(2){
+.reviews .carousels div:nth-of-type(1){
     margin-right: 24px;
 }
 @media (max-width: 1000px) {
@@ -360,7 +361,7 @@ textarea{
         display: grid;
         grid-template-columns: 10% 1fr 10%;
     }
-    .reviews .carousels div:nth-of-type(2){
+    .reviews .carousels div:nth-of-type(1){
         display: none;
         margin-right: 0;
     }
@@ -387,6 +388,8 @@ textarea{
 }
 
 .reviews .carousels .arrow{
+    background-color: transparent;
+    border: none;
     display: flex;
     vertical-align: middle;
     padding: 8px;
@@ -411,3 +414,19 @@ textarea{
     margin-top: 32px;
 }
 
+.footer{
+    height: 234px;
+    background-color: var(--base-black-color);
+    display: grid;
+    padding: 24px 15%;
+    grid-template-rows: 76px 44px;
+    gap: 24px;
+    color: var(--base-white-color);
+}
+
+.footer .nav a{
+    color: var(--base-white-color);
+}
+.footer .info{
+    color: #4B5563;
+}
