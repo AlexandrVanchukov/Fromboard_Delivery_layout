@@ -20,6 +20,11 @@
     --regular-font-weight: 400;
     --bold-font-weight: 700;
     --black-font-weight: 900;
+    --2xl-padding: 10%;
+    --lg-padding: 15%;
+    --md-padding: 12.5%;
+    --sm-padding: 7%;
+
   }
 body, ul, ol, p, h1, h2, h3{
     margin: 0;
@@ -47,11 +52,17 @@ textarea{
     background-color: var(--base-white-color);
     height: 144px;
     display: grid;
-    padding: 24px 15%;
+    padding: 24px var(--2xl-padding);
     grid-template-rows: 76px 44px;
     gap: 24px;
 }
+.burger-menu{
+    display: none;
+}
 .container{
+    display: flex;
+}
+.logo-block{
     display: flex;
 }
 .company-name{
@@ -64,6 +75,8 @@ textarea{
     text-align: left;
 }
 .header .info{
+    display: flex;
+    flex-direction: column;
     font-size: var(--base-font-size);
     font-weight: var(--regular-font-weight);
     line-height: var(--base-line-height);
@@ -77,6 +90,7 @@ textarea{
 }
 .call-info{
     padding-left: 12px;
+    align-self: center;
 }
 
 .phone{
@@ -86,7 +100,7 @@ textarea{
     letter-spacing: 0em;
     text-align: left;
 }
-.header .free-call{
+.free-call{
     font-size: var(--2xl-font-size);
     font-weight: var(--light-font-weight);
     line-height: var(--3xl-line-height);
@@ -130,13 +144,9 @@ textarea{
 
 
 .main{
-    padding: 72px 15%;
+    padding: 72px var(--2xl-padding);
 }
-@media (max-width: 1200px) {
-    .main{
-        padding: 72px 8%;
-    }
-}
+
 .main-info{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px , 1fr));
@@ -418,15 +428,145 @@ textarea{
     height: 234px;
     background-color: var(--base-black-color);
     display: grid;
-    padding: 24px 15%;
+    padding: 24px var(--2xl-padding);
     grid-template-rows: 76px 44px;
     gap: 24px;
     color: var(--base-white-color);
 }
 
+.footer .nav{
+    margin-left: auto;
+}
 .footer .nav a{
     color: var(--base-white-color);
 }
 .footer .info{
     color: #4B5563;
+}
+@media (max-width: 1536px) {
+    .main{
+        padding: 72px var(--lg-padding);
+    }
+    .header{
+        padding: 24px var(--lg-padding);
+        grid-template-rows: 76px 72px;
+        gap: 12px;
+        position: relative;
+        height: 200px;
+    }
+    .footer{
+        padding: 24px var(--lg-padding);
+    }
+    .header .info{
+        position: absolute;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        border-right: 0;
+        bottom: 10px;
+        text-align: center;
+    }
+    .header .cost{
+        width: 190px;
+    }
+    .header .delivery{
+        width: 190px;
+    }
+    .header  .container:nth-child(2){
+        border-top: 2px solid #8B5CF6;
+        border-bottom: 2px solid #8B5CF6;
+        height: 68px;
+        align-items: center;
+    }
+
+    .footer{
+        align-content: center;
+        position: relative;
+        height: 300px;
+    }
+    .footer .nav{
+        position: absolute;
+        top: 30px;
+        width: 70%;
+        justify-content: center;
+    }
+    .footer .info{
+        text-align: center;
+    }
+    .footer .container{
+        justify-content: space-between;
+    }
+
+}
+@media (max-width: 1024px) {
+    .main{
+        padding: 46px var(--md-padding);
+    }
+    .header{
+        padding: 24px var(--md-padding);
+    }
+    .footer{
+        padding: 24px var(--md-padding);
+    }
+    .header .info{
+        width: 75%;
+    }
+     .phone{
+        font-size: var(--2xl-font-size);
+        line-height: var(--2xl-line-height);
+    }
+     .free-call{
+        font-size: var(--lg-font-size);
+        line-height: var(--lg-line-height);
+    }
+    .footer .nav{
+        width: 75%;
+
+    }
+    .footer .container{
+        justify-content: space-between;
+    }
+
+}
+@media (max-width: 800px) {
+    .main{
+        padding: 24px var(--sm-padding);
+    }
+    .header{
+        padding: 24px var(--sm-padding);
+        height: 80px;
+    }
+    .footer{
+        padding: 24px var(--sm-padding);
+    }
+    .header  .container:nth-child(2){
+        display: none;
+    }
+    .header .info{
+        display: none;
+    }
+
+    .footer{
+        grid-template-rows: auto;
+        height: 380px;
+    }
+    
+    .footer .phone{
+        font-size: var(--4xl-font-size);
+        line-height: var(--4xl-line-height);
+    }
+    .footer .free-call{
+        font-size: var(--2xl-font-size);
+        line-height: var(--3xl-line-height);
+    }
+
+    .footer .nav{
+        width: 80%;
+    }
+    .footer .container{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: start;
+    }
 }
