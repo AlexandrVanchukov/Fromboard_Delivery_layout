@@ -353,7 +353,39 @@ textarea{
 
 .reviews .carousels{
     display: grid;
-    grid-template-columns: 10% 1fr 1fr 10%;
+    position: relative;
+    /* grid-template-columns:  1fr 1fr ; */
+    overflow: hidden;
+    padding: 0 80px;
+}
+.reviews .slider{
+    display: grid;
+    position: relative;
+     grid-template-columns:  1fr 1fr ; 
+     gap: 24px; 
+     animation-duration: 0.5s;
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+.carousels button:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+.carousels button:disabled{
+    opacity: 50%;
+}
+
+@keyframes fade {
+    /* Устанавливаем и изменяем степень прозрачности: */
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 .reviews .carousels .item{
@@ -362,18 +394,11 @@ textarea{
     background-color: var(--base-white-color);
     padding: 16px 32px;
     border-radius: 16px;
-}
-.reviews .carousels div:nth-of-type(1){
-    margin-right: 24px;
+    
 }
 @media (max-width: 1000px) {
-    .reviews .carousels{
-        display: grid;
-        grid-template-columns: 10% 1fr 10%;
-    }
-    .reviews .carousels div:nth-of-type(1){
-        display: none;
-        margin-right: 0;
+    .reviews .slider{
+         grid-template-columns:  1fr;
     }
 }
 .reviews .carousels .item .text{
@@ -397,18 +422,26 @@ textarea{
     bottom: 8px;
 }
 
-.reviews .carousels .arrow{
+.prev-button, .next-button{
+    padding: 0;
+    position: absolute;
+    top: 45%;
+    width: 60px;
+    height: 60px;
     background-color: transparent;
     border: none;
-    display: flex;
-    vertical-align: middle;
-    padding: 8px;
-    align-items: center;
-    justify-content: center;
 }
-.reviews .carousels .arrow-right{
+.prev-button img, .next-button img{
+  width: 48px;
+  height: 48px;
+}
+.reviews .carousels .prev-button{
+    left: 10px;
+}
+
+.reviews .carousels .next-button{
     transform: rotate(180deg);
-    justify-self: end;
+    right: 10px;
 }
 
 .question{
