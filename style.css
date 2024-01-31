@@ -229,6 +229,7 @@ textarea{
 .form-grid .wide{
     grid-column: 2 span;
 }
+
 .form-grid .button{
     height: 44px;
 }
@@ -354,7 +355,6 @@ textarea{
 .reviews .carousels{
     display: grid;
     position: relative;
-    /* grid-template-columns:  1fr 1fr ; */
     overflow: hidden;
     padding: 0 80px;
 }
@@ -379,7 +379,6 @@ textarea{
 }
 
 @keyframes fade {
-    /* Устанавливаем и изменяем степень прозрачности: */
     from {
         opacity: 0.4
     }
